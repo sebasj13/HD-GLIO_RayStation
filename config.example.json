@@ -1,0 +1,12 @@
+{
+  "job_root": "\\\\fileserver\\share\\transfer\\hdglio",
+  "heartbeat_file": null,
+  "poll_interval_s": 5,
+  "gpu_device": 0,
+  "hdbet_exe": null,
+  "target_series_slot": "T1c",
+  "roi_specs": {
+    "1": { "name": "HDGLIO_NET", "color": [64, 128, 255], "interpreted_type": "ORGAN" },
+    "2": { "name": "HDGLIO_ET", "color": [255, 64, 64], "interpreted_type": "GTV" }
+  }
+}

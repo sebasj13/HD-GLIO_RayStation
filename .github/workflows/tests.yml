@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  self-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependencies (no GPU / model weights needed)
+        run: python -m pip install numpy SimpleITK pydicom scikit-image
+      - name: Compile all sources
+        run: python -m compileall -q glio_watcher.py pipeline raystation tests
+      - name: Geometry self-test
+        run: python tests/test_geometry.py
+      - name: Job mapping self-test
+        run: python tests/test_job_mapping.py
