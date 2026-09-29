@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- HD-GLIO RayStation --------------------------------------------------
+# site config (copy config.example.json -> config.json and adapt)
+config.json
+
+# patient / runtime data - never commit
+TestData/
+test_output/
+jobs/
+logs/
+work/
+*.nii
+*.nii.gz
+*.dcm
