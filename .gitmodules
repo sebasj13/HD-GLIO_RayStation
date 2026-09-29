@@ -1,0 +1,3 @@
+[submodule "third_party/HD-GLIO"]
+	path = third_party/HD-GLIO
+	url = https://github.com/CCI-Bonn/HD-GLIO.git
