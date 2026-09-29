@@ -27,12 +27,12 @@ oblique acquisitions and an RTSTRUCT that references the original images.
 
 ```
 RayStation (TPS client)          GPU workstation                    RayStation
-┌──────────────────────┐   ┌───────────────────────────┐   ┌──────────────────────┐
-│ HD-GLIO_AutoContour  │   │ glio_watcher.py           │   │ HD-GLIO_AutoContour  │
+┌──────────────────────┐    ┌───────────────────────────┐   ┌──────────────────────┐
+│ HD-GLIO_AutoContour  │    │ glio_watcher.py           │   │ HD-GLIO_AutoContour  │
 │  - series selection  │──▶│  - DICOM → NIfTI          │──▶│  - RTSTRUCT import   │
-│  - DICOM export      │   │  - HD-BET skull-strip     │   │  - ROI volumes in    │
-│  - job.json          │   │  - rigid co-registration  │   │    the status bar    │
-└──────────────────────┘   │  - HD-GLIO (nnU-Net)      │   └──────────────────────┘
+│  - DICOM export      │    │  - HD-BET skull-strip     │   │  - ROI volumes in    │
+│  - job.json          │    │  - rigid co-registration  │   │    the status bar    │
+└──────────────────────┘    │  - HD-GLIO (nnU-Net)      │   └──────────────────────┘
          shared folder      │  - mask → RTSTRUCT        │
                             └───────────────────────────┘
 ```
