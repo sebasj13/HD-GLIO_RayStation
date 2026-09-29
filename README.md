@@ -7,7 +7,7 @@ Glioma contours in RayStation from a single script. The user picks four MR
 series (T1, T1c, T2, FLAIR) in a small window and presses Start. A GPU
 workstation then runs [HD-GLIO](https://github.com/CCI-Bonn/HD-GLIO) on
 them, and a few minutes later the result appears in the case as a structure
-set - the enhancing tumour and the T2/FLAIR abnormality as two ROIs on the
+set - the enhancing tumor and the T2/FLAIR abnormality as two ROIs on the
 contrast-enhanced T1.
 
 HD-GLIO itself expects preprocessed NIfTI files: skull-stripped, co-registered
@@ -47,7 +47,7 @@ data stays on the share.
 | Label | ROI | Meaning |
 |---|---|---|
 | 1 | `HDGLIO_NET` | non-enhancing T2/FLAIR signal abnormality |
-| 2 | `HDGLIO_ET` | contrast-enhancing tumour |
+| 2 | `HDGLIO_ET` | contrast-enhancing tumor |
 
 A case takes about 3.5-5 min on one GPU, most of it HD-BET. Tested with
 RayStation 2024B (CPython 3.11 scripting), Windows 11, HD-GLIO v2 weights,
@@ -251,7 +251,7 @@ are downloaded from zenodo under the terms given there.
 If you use this in research, please cite the underlying methods:
 
 - **HD-GLIO**: Kickingereder P, Isensee F, et al. Automated quantitative
-  tumour response assessment of MRI in neuro-oncology with artificial neural
+  tumor response assessment of MRI in neuro-oncology with artificial neural
   networks. *Lancet Oncol.* 2019;20(5):728-740.
   https://github.com/CCI-Bonn/HD-GLIO
 - **HD-BET**: Isensee F, et al. Automated brain extraction of multisequence
